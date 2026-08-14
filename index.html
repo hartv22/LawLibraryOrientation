@@ -86,7 +86,7 @@
   .cell.social.marked .mark{border-color:var(--teal); color:var(--teal); box-shadow:0 0 0 2px rgba(46,110,94,.12);}
 
   .cell.free{background:#fff; border-top-color:var(--scarlet); align-items:center; justify-content:center;}
-  .cell.free .seal{font-family:"Special Elite",monospace; color:var(--scarlet); border:2.5px solid var(--scarlet); border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-size:11px; letter-spacing:.06em; transform:rotate(-8deg); text-align:center; line-height:1;}
+  .cell.free .seal{font-family:"Special Elite",monospace; color:var(--scarlet);  width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-size:18px; letter-spacing:.06em; transform:rotate(-8deg); text-align:center; line-height:1;}
   .cell.free .free-cap{font-family:"Special Elite",monospace; font-size:9px; letter-spacing:.13em; color:var(--ink-soft); text-transform:uppercase; margin-top:7px;text-align: center; }
 
   .banner{text-align:center; font-family:"Special Elite",monospace; color:var(--scarlet); text-transform:uppercase; letter-spacing:.3em; font-size:15px; height:0; overflow:hidden; opacity:0; transition:opacity .25s ease,height .25s ease,margin .25s ease;}
@@ -138,8 +138,8 @@
 <main class="card" id="card" role="application" aria-label="Bookshop bingo card">
   <hr class="rule">
   <div class="head">
-    <h1 class="title"><span class="b">Law Library Orientation </br>B&nbsp;I&nbsp;N&nbsp;G&nbsp;O</span></h1>
-    <p class="dek">When we mention one of these terms in our presentation, check it off. Five in a row — across, down, or corner to corner — wins. Center is free; so is scheduling a reference consulation</p>
+    <h1 class="title"><span class="b">Law Library Orientation </br></br>B&nbsp;I&nbsp;N&nbsp;G&nbsp;O</span></h1>
+    <p class="dek">When we mention one of these terms in our presentation, check it off. </br>Five in a row — across, down, or corner to corner — wins. </br>Center is free; so is scheduling a reference consulation</p>
   </div>
   <hr class="rule thin">
 
@@ -150,12 +150,12 @@
   <div class="meta"><span class="count" id="count"><b>0</b> / 24 found</span></div>
 
   <div class="controls no-print">
+
     <button class="btn primary" id="export">Export image</button>
     <button class="btn" id="new">New card</button>
     <button class="btn" id="print">Print</button>
     <button class="btn" id="clear">Clear card</button>
   </div>
-  <p class="hint no-print">Export grabs the whole card as one image. On a phone, a screenshot works too — just scroll so every row is in frame.</p>
 
   <div class="foot">
     <span>Marker no. <span id="ticket">001</span></span>
@@ -186,7 +186,6 @@
     {t:'Dry Erase', },
     {t:'Interactive Citation Workstation',},
     {t:'Blog',},
-    {t:'Reference Consultation',},
     {t:'LSP Class', },
     {t:'Secondary Sources',},
     {t:'Printers', },
@@ -235,7 +234,7 @@
       if(i===12){
         cell.classList.add('free'); cell.dataset.free='1';
         cell.setAttribute('aria-label','Free space');
-        cell.innerHTML='<span class="seal">FREE</span><span class="free-cap">Schedule a Reference Consultation</span>';
+        cell.innerHTML='<span class="seal">FREE</span><span class="free-cap">Reference Consultation</span>';
         cells.push(cell); grid.appendChild(cell); continue;
       }
       const item = picks[i<12 ? i : i-1];
